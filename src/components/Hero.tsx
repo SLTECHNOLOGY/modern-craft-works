@@ -13,9 +13,12 @@ const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Construyendo soluciones{" "}
-          <span className="gradient-text">digitales escalables</span>
+          Steven Alexander <span className="gradient-text">Hernández Jiménez</span>
         </h1>
+        
+        <p className="text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground">
+          Construyendo soluciones digitales escalables
+        </p>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
           Desarrollo aplicaciones web modernas y de alto rendimiento que transforman 

@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-border/30 text-center text-muted-foreground text-sm">
-          <p>© 2025 Full Stack Software Engineer. Construido con React, TypeScript y Tailwind CSS.</p>
+          <p>© 2025 Steven Alexander Hernández Jiménez. Construido con React, TypeScript y Tailwind CSS.</p>
         </div>
       </div>
     </footer>
