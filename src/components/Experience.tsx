@@ -1,7 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Calendar, Building2 } from "lucide-react";
+import { Briefcase, Calendar } from "lucide-react";
 import { IconType } from "react-icons";
+import { 
+  SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiNeo4J, SiAmazon, SiGooglecloud,
+  SiSwagger, SiTypescript, SiNextdotjs, SiNodedotjs, SiMongodb, SiRedis, SiDocker, 
+  SiGitlab, SiStripe, SiWhatsapp, SiGraphql, SiVuedotjs, SiLaravel, SiNestjs
+} from "react-icons/si";
+
+interface Technology {
+  name: string;
+  icon?: IconType;
+  color?: string;
+}
 
 interface Job {
   company: string;
@@ -11,8 +22,40 @@ interface Job {
   period: string;
   location: string;
   description: string;
-  technologies: string[];
+  technologies: Technology[];
 }
+
+const techMap: Record<string, { icon?: IconType; color?: string }> = {
+  "Python": { icon: SiPython, color: "#3776AB" },
+  "JavaScript": { icon: SiJavascript, color: "#F7DF1E" },
+  "Flask": { icon: SiFlask, color: "#000000" },
+  "React": { icon: SiReact, color: "#61DAFB" },
+  "MySQL": { icon: SiMysql, color: "#4479A1" },
+  "Neo4j": { icon: SiNeo4J, color: "#008CC1" },
+  "AWS": { icon: SiAmazon, color: "#FF9900" },
+  "GCP": { icon: SiGooglecloud, color: "#4285F4" },
+  "GenAI": { color: "#FF6B6B" },
+  "OWASP Top 10": { color: "#000000" },
+  "TypeScript": { icon: SiTypescript, color: "#3178C6" },
+  "Next.js": { icon: SiNextdotjs, color: "#000000" },
+  "NestJs": { icon: SiNestjs, color: "#E0234E" },
+  "MongoDB": { icon: SiMongodb, color: "#47A248" },
+  "Redis": { icon: SiRedis, color: "#DC382D" },
+  "Docker": { icon: SiDocker, color: "#2496ED" },
+  "Stripe": { icon: SiStripe, color: "#008CDD" },
+  "WhatsApp API": { icon: SiWhatsapp, color: "#25D366" },
+  "Node.js": { icon: SiNodedotjs, color: "#339933" },
+  "GraphQL": { icon: SiGraphql, color: "#E10098" },
+  "OpenAI": { color: "#412991" },
+  "Dialogflow": { color: "#FF9800" },
+  "Rasa": { color: "#5A17EE" },
+  "Vue.js": { icon: SiVuedotjs, color: "#4FC08D" },
+  "Laravel": { icon: SiLaravel, color: "#FF2D20" },
+  "Azure DevOps": { color: "#0078D4" },
+  "Angular": { color: "#DD0031" },
+  "Swagger": { icon: SiSwagger, color: "#85EA2D" },
+  "GitLab": { icon: SiGitlab, color: "#FC6D26" }
+};
 
 const jobs: Job[] = [
   {
@@ -22,7 +65,11 @@ const jobs: Job[] = [
     period: "06/2024 – 09/2025",
     location: "Medellín, Colombia",
     description: "Creador del proyecto AutomateX en CryptoSecurity. Desarrollo de soluciones de seguridad automatizadas utilizando IA generativa y múltiples LLM.",
-    technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "Neo4j", "AWS", "GCP", "GenAI", "OWASP Top 10"]
+    technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "Neo4j", "AWS", "GCP", "GenAI", "OWASP Top 10"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
   },
   {
     company: "Idea Latente",
@@ -31,7 +78,11 @@ const jobs: Job[] = [
     period: "12/2023 – 06/2024",
     location: "Medellín, Antioquia",
     description: "Proyecto Tyfyr. Desarrollo de plataforma e-commerce con integraciones de pago y mensajería.",
-    technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Stripe", "WhatsApp API"]
+    technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Stripe", "WhatsApp API"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
   },
   {
     company: "Teleperformance",
@@ -40,7 +91,11 @@ const jobs: Job[] = [
     period: "03/2023 – 12/2023",
     location: "Medellín, Colombia",
     description: "Proyectos GenAI, Athena for Audio PC, IVA Factory Intelligent Virtual Assistant. Desarrollo de asistentes virtuales inteligentes con IA.",
-    technologies: ["TypeScript", "React.js", "Angular", "Node.js", "GraphQL", "AWS", "OpenAI", "Dialogflow", "Rasa"]
+    technologies: ["TypeScript", "React", "Angular", "Node.js", "GraphQL", "AWS", "OpenAI", "Dialogflow", "Rasa"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
   },
   {
     company: "Wolkvox",
@@ -49,7 +104,11 @@ const jobs: Job[] = [
     period: "09/2020 – 02/2023",
     location: "Medellín, Colombia",
     description: "Proyecto CRM. Desarrollo de sistema de gestión de relaciones con clientes.",
-    technologies: ["PHP", "JavaScript", "Vue.js", "Laravel", "NestJs", "MySQL", "MongoDB", "Azure DevOps"]
+    technologies: ["JavaScript", "Vue.js", "Laravel", "NestJs", "MySQL", "MongoDB", "Azure DevOps"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
   },
   {
     company: "Indra Company",
@@ -58,7 +117,11 @@ const jobs: Job[] = [
     period: "04/2019 – 08/2020",
     location: "Medellín, Colombia",
     description: "Proyecto Grupo Familia CAU. Implementación de soluciones con IA en SAP y automatización de procesos.",
-    technologies: ["IBM Watson", "Node.js", "HTML", "SAP", "Automatización"]
+    technologies: ["Node.js", "IBM Watson", "SAP"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
   }
 ];
 
@@ -127,16 +190,30 @@ const Experience = () => {
                 <p className="text-foreground/90 mb-4">
                   {job.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {job.technologies.map((tech) => (
-                    <Badge 
-                      key={tech} 
-                      variant="secondary"
-                      className="bg-muted/50 hover:bg-primary/10 hover:text-primary transition-colors"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
+                <div className="flex flex-wrap gap-3">
+                  {job.technologies.map((tech) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={tech.name}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border/30 hover:border-primary/50 transition-all group/tech"
+                        title={tech.name}
+                      >
+                        {Icon ? (
+                          <>
+                            <Icon className="w-4 h-4" style={{ color: tech.color }} />
+                            <span className="text-xs font-medium text-foreground/80 group-hover/tech:text-primary transition-colors">
+                              {tech.name}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-xs font-medium" style={{ color: tech.color }}>
+                            {tech.name}
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
