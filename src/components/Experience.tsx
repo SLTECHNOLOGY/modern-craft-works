@@ -1,9 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, Building2 } from "lucide-react";
+import { IconType } from "react-icons";
 
 interface Job {
   company: string;
+  logo?: IconType | React.ComponentType<{ className?: string }>;
+  logoColor?: string;
   position: string;
   period: string;
   location: string;
@@ -14,6 +17,7 @@ interface Job {
 const jobs: Job[] = [
   {
     company: "Mercado Libre",
+    logoColor: "#FFE600",
     position: "CS Software Engineer",
     period: "06/2024 – 09/2025",
     location: "Medellín, Colombia",
@@ -22,6 +26,7 @@ const jobs: Job[] = [
   },
   {
     company: "Idea Latente",
+    logoColor: "#6366F1",
     position: "Senior Full Stack Development Engineer",
     period: "12/2023 – 06/2024",
     location: "Medellín, Antioquia",
@@ -30,6 +35,7 @@ const jobs: Job[] = [
   },
   {
     company: "Teleperformance",
+    logoColor: "#0066B2",
     position: "IVA Developer Jr",
     period: "03/2023 – 12/2023",
     location: "Medellín, Colombia",
@@ -38,6 +44,7 @@ const jobs: Job[] = [
   },
   {
     company: "Wolkvox",
+    logoColor: "#00A3E0",
     position: "Software Development Analyst Middle",
     period: "09/2020 – 02/2023",
     location: "Medellín, Colombia",
@@ -46,6 +53,7 @@ const jobs: Job[] = [
   },
   {
     company: "Indra Company",
+    logoColor: "#E30613",
     position: "Technical Support Specialist",
     period: "04/2019 – 08/2020",
     location: "Medellín, Colombia",
@@ -81,12 +89,28 @@ const Experience = () => {
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      {job.logo ? (
+                        <div className="p-2 rounded-lg bg-background border border-border/50">
+                          <job.logo className="w-6 h-6" style={{ color: job.logoColor }} />
+                        </div>
+                      ) : (
+                        <div 
+                          className="px-3 py-1 rounded-lg bg-background border border-border/50 text-sm font-semibold"
+                          style={{ color: job.logoColor }}
+                        >
+                          {job.company}
+                        </div>
+                      )}
+                      {job.logo && (
+                        <CardDescription className="text-base font-semibold text-foreground/80">
+                          {job.company}
+                        </CardDescription>
+                      )}
+                    </div>
                     <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
                       {job.position}
                     </CardTitle>
-                    <CardDescription className="text-base font-semibold text-foreground/80">
-                      {job.company}
-                    </CardDescription>
                   </div>
                   <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
