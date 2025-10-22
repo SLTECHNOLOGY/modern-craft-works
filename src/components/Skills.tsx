@@ -7,12 +7,11 @@ import {
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
   SiSwagger, SiStripe, SiWhatsapp, SiOpenai
 } from "react-icons/si";
-import { Code2, Shield, GitBranch, Cloud, Brain } from "lucide-react";
 import { IconType } from "react-icons";
 
 interface Skill {
   name: string;
-  icon: IconType | React.ComponentType<{ className?: string }>;
+  icon?: IconType | React.ComponentType<{ className?: string }>;
   color?: string;
 }
 
@@ -69,7 +68,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "AWS", icon: SiAmazon, color: "#FF9900" },
       { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
-      { name: "Azure", icon: Cloud, color: "#0078D4" },
+      { name: "Azure", color: "#0078D4" },
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
@@ -87,20 +86,26 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Security",
     skills: [
-      { name: "OWASP", icon: Shield, color: "#000000" }
+      { name: "OWASP", color: "#000000" },
+      { name: "ISO 27001" },
+      { name: "SonarQube" }
     ]
   },
   {
     title: "AI & ML",
     skills: [
-      { name: "IBM Watson", icon: Brain, color: "#006699" },
+      { name: "IBM Watson", color: "#006699" },
+      { name: "Dialogflow" },
+      { name: "Rasa" },
       { name: "OpenAI", icon: SiOpenai, color: "#412991" }
     ]
   },
   {
     title: "Methodology",
     skills: [
-      { name: "Scrum", icon: GitBranch, color: "#009FDA" }
+      { name: "Scrum" },
+      { name: "Kanban" },
+      { name: "SOLID" }
     ]
   }
 ];
@@ -137,15 +142,28 @@ const Skills = () => {
                       className="flex flex-col items-center gap-2 group/item"
                       title={skill.name}
                     >
-                      <div className="p-3 rounded-lg bg-background/50 border border-border/30 group-hover/item:border-primary/50 transition-all duration-300 group-hover/item:scale-110 group-hover/item:shadow-lg">
-                        <Icon 
-                          className="w-8 h-8 transition-colors" 
-                          style={{ color: skill.color }}
-                        />
-                      </div>
-                      <span className="text-xs text-muted-foreground text-center group-hover/item:text-foreground transition-colors">
-                        {skill.name}
-                      </span>
+                      {Icon ? (
+                        <>
+                          <div className="p-3 rounded-lg bg-background/50 border border-border/30 group-hover/item:border-primary/50 transition-all duration-300 group-hover/item:scale-110 group-hover/item:shadow-lg">
+                            <Icon 
+                              className="w-8 h-8 transition-colors" 
+                              style={{ color: skill.color }}
+                            />
+                          </div>
+                          <span className="text-xs text-muted-foreground text-center group-hover/item:text-foreground transition-colors">
+                            {skill.name}
+                          </span>
+                        </>
+                      ) : (
+                        <div className="px-3 py-2 rounded-lg bg-background/50 border border-border/30 group-hover/item:border-primary/50 transition-all duration-300 group-hover/item:scale-105 group-hover/item:shadow-lg">
+                          <span 
+                            className="text-xs font-medium text-foreground/90 transition-colors"
+                            style={{ color: skill.color }}
+                          >
+                            {skill.name}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
