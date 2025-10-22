@@ -1,57 +1,107 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Layout, Server, Database, Cloud, Plug, Shield, Brain, GitBranch, LucideIcon } from "lucide-react";
+import { 
+  SiPhp, SiJavascript, SiTypescript, SiPython, SiNodedotjs, SiCplusplus,
+  SiHtml5, SiCss3, SiSass, SiVuedotjs, SiReact, SiNextdotjs,
+  SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
+  SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
+  SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
+  SiSwagger, SiStripe, SiWhatsapp, SiOpenai
+} from "react-icons/si";
+import { Code2, Shield, GitBranch, Cloud, Brain } from "lucide-react";
+import { IconType } from "react-icons";
+
+interface Skill {
+  name: string;
+  icon: IconType | React.ComponentType<{ className?: string }>;
+  color?: string;
+}
 
 interface SkillCategory {
   title: string;
-  icon: LucideIcon;
-  skills: string[];
+  skills: Skill[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
-    icon: Code2,
-    skills: ["PHP", "JavaScript", "TypeScript", "Python", "Node.js", "C++"]
+    skills: [
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Python", icon: SiPython, color: "#3776AB" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "C++", icon: SiCplusplus, color: "#00599C" }
+    ]
   },
   {
     title: "Frontend",
-    icon: Layout,
-    skills: ["HTML", "CSS", "Sass", "Vue.js", "React.js", "Next.js", "React Native"]
+    skills: [
+      { name: "HTML", icon: SiHtml5, color: "#E34F26" },
+      { name: "CSS", icon: SiCss3, color: "#1572B6" },
+      { name: "Sass", icon: SiSass, color: "#CC6699" },
+      { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" }
+    ]
   },
   {
     title: "Backend",
-    icon: Server,
-    skills: ["Laravel", "Flask", "Express", "NestJS", "REST APIs", "GraphQL"]
+    skills: [
+      { name: "Laravel", icon: SiLaravel, color: "#FF2D20" },
+      { name: "Flask", icon: SiFlask, color: "#000000" },
+      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
+      { name: "GraphQL", icon: SiGraphql, color: "#E10098" }
+    ]
   },
   {
     title: "Databases",
-    icon: Database,
-    skills: ["MySQL", "MongoDB", "SQLite", "Redis", "Neo4j"]
+    skills: [
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "SQLite", icon: SiSqlite, color: "#003B57" },
+      { name: "Redis", icon: SiRedis, color: "#DC382D" },
+      { name: "Neo4j", icon: SiNeo4J, color: "#008CC1" }
+    ]
   },
   {
     title: "Cloud & DevOps",
-    icon: Cloud,
-    skills: ["AWS", "GCP", "Azure", "Docker", "Git", "GitLab", "CI/CD", "Jira", "Azure DevOps"]
+    skills: [
+      { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+      { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
+      { name: "Azure", icon: Cloud, color: "#0078D4" },
+      { name: "Docker", icon: SiDocker, color: "#2496ED" },
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
+      { name: "Jira", icon: SiJira, color: "#0052CC" }
+    ]
   },
   {
     title: "APIs & Tools",
-    icon: Plug,
-    skills: ["Swagger", "Stripe", "SendGrid", "WhatsApp API"]
+    skills: [
+      { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
+      { name: "Stripe", icon: SiStripe, color: "#008CDD" },
+      { name: "WhatsApp", icon: SiWhatsapp, color: "#25D366" }
+    ]
   },
   {
     title: "Security",
-    icon: Shield,
-    skills: ["OWASP Top 10", "ISO 27001", "SonarQube"]
+    skills: [
+      { name: "OWASP", icon: Shield, color: "#000000" }
+    ]
   },
   {
     title: "AI & ML",
-    icon: Brain,
-    skills: ["IBM Watson", "Dialogflow", "Rasa", "OpenAI", "GenAI"]
+    skills: [
+      { name: "IBM Watson", icon: Brain, color: "#006699" },
+      { name: "OpenAI", icon: SiOpenai, color: "#412991" }
+    ]
   },
   {
     title: "Methodology",
-    icon: GitBranch,
-    skills: ["Scrum", "Kanban", "SOLID", "KISS", "DRY", "C4 Model", "ADR", "Design Patterns"]
+    skills: [
+      { name: "Scrum", icon: GitBranch, color: "#009FDA" }
+    ]
   }
 ];
 
@@ -69,35 +119,39 @@ const Skills = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, idx) => {
-            const Icon = category.icon;
-            return (
-              <Card 
-                key={category.title}
-                className="p-6 glass-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 border-border/50 animate-slide-up group"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary">
-                    {category.title}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-sm rounded-full bg-muted/50 text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default border border-border/30"
+          {skillCategories.map((category, idx) => (
+            <Card 
+              key={category.title}
+              className="p-6 glass-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 border-border/50 animate-slide-up"
+              style={{ animationDelay: `${idx * 0.1}s` }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-6">
+                {category.title}
+              </h3>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                {category.skills.map((skill) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div
+                      key={skill.name}
+                      className="flex flex-col items-center gap-2 group/item"
+                      title={skill.name}
                     >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-            );
-          })}
+                      <div className="p-3 rounded-lg bg-background/50 border border-border/30 group-hover/item:border-primary/50 transition-all duration-300 group-hover/item:scale-110 group-hover/item:shadow-lg">
+                        <Icon 
+                          className="w-8 h-8 transition-colors" 
+                          style={{ color: skill.color }}
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground text-center group-hover/item:text-foreground transition-colors">
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
