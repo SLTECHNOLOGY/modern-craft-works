@@ -40,13 +40,6 @@ const Hero = () => {
         <div className="flex gap-4 justify-center items-center flex-wrap">
           <Button 
             size="lg" 
-            className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all"
-          >
-            Ver Proyectos
-            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-          </Button>
-          <Button 
-            size="lg" 
             variant="outline" 
             className="border-border hover:bg-card/50 backdrop-blur-sm"
           >
