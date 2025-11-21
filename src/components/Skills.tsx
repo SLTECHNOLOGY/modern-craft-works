@@ -33,8 +33,7 @@ const skillCategories: SkillCategory[] = [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-      { name: "C++", icon: SiCplusplus, color: "#00599C" }
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" }
     ]
   },
   {
@@ -73,25 +72,15 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "AWS", icon: SiAmazon, color: "#FF9900" },
       { name: "GCP", icon: SiGooglecloud, color: "#4285F4" },
-      { name: "Azure", color: "#0078D4" },
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
       { name: "Git", icon: SiGit, color: "#F05032" },
-      { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
       { name: "Jira", icon: SiJira, color: "#0052CC" }
-    ]
-  },
-  {
-    title: "APIs & Tools",
-    skills: [
-      { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
-      { name: "Stripe", icon: SiStripe, color: "#008CDD" },
-      { name: "WhatsApp", icon: SiWhatsapp, color: "#25D366" }
     ]
   },
   {
     title: "Security",
     skills: [
-      { name: "OWASP", icon: Shield, color: "#000000" },
+      { name: "OWASP TOP 10", icon: Shield, color: "#000000" },
       { name: "ISO 27001", icon: Lock, color: "#0066CC" },
       { name: "SonarQube", icon: SiSonarqube, color: "#4E9BCD" }
     ]
@@ -102,7 +91,8 @@ const skillCategories: SkillCategory[] = [
       { name: "IBM Watson", icon: Brain, color: "#006699" },
       { name: "Dialogflow", icon: Shield, color: "#FF9800" },
       { name: "Rasa", icon: Shield, color: "#5A17EE" },
-      { name: "OpenAI", icon: SiOpenai, color: "#412991" }
+      { name: "OpenAI", icon: SiOpenai, color: "#412991" },
+      { name: "GenAI", icon: Brain, color: "#006699" }
     ]
   },
   {
@@ -120,7 +110,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Big O", icon: TrendingUp, color: "#E91E63" },
       { name: "CI/CD", icon: GitBranch, color: "#00C853" },
       { name: "Github Actions", icon: SiGithubactions, color: "#2088FF" },
-      { name: "SDLC", icon: RotateCw, color: "#FF9800" }
+      { name: "SDLC", icon: RotateCw, color: "#FF9800" },
+      { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
     ]
   }
 ];
