@@ -116,7 +116,7 @@ const skillCategories: SkillCategory[] = [
       { name: "C4 Model", icon: Layers, color: "#9C27B0" },
       { name: "ADR", icon: FileText, color: "#4CAF50" },
       { name: "Design Patterns", icon: Grid3x3, color: "#FF5722" },
-      { name: "Arquitectura", icon: Building2, color: "#607D8B" },
+      { name: "Architecture", icon: Building2, color: "#607D8B" },
       { name: "Big O", icon: TrendingUp, color: "#E91E63" },
       { name: "CI/CD", icon: GitBranch, color: "#00C853" },
       { name: "Github Actions", icon: SiGithubactions, color: "#2088FF" },
