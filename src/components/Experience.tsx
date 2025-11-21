@@ -68,7 +68,7 @@ const jobs: Job[] = [
     position: "CS Software Engineer",
     period: "06/2024 – 09/2025",
     location: "Medellín, Colombia",
-    description: "Creador del proyecto AutomateX en CryptoSecurity. Desarrollo de soluciones de seguridad automatizadas utilizando IA generativa y múltiples LLM.",
+    description: "Creador del proyecto AutomateX en CryptoSecurity. Desarrollo de soluciones de seguridad automatizadas utilizando múltiples LLM.",
     technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "Neo4j", "AWS", "GCP", "GenAI", "OWASP Top 10"].map(name => ({
       name,
       icon: techMap[name]?.icon,

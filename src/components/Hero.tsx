@@ -41,6 +41,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
+            disabled={true}
             className="border-border hover:bg-card/50 backdrop-blur-sm"
           >
             Contáctame
@@ -49,7 +50,7 @@ const Hero = () => {
         
         <div className="flex gap-6 justify-center mt-12">
           <a 
-            href="https://github.com" 
+            href="https://github.com/stevenhdz" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -58,7 +59,7 @@ const Hero = () => {
             <Github className="w-6 h-6" />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/stevenhdz/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -67,7 +68,7 @@ const Hero = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a 
-            href="mailto:contact@example.com"
+            href="mailto:stevenhernandezj@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="Email"
           >
