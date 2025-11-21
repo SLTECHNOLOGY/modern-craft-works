@@ -5,7 +5,8 @@ import {
   SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
   SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
-  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube, SiGithubactions
+  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube, SiGithubactions,
+  SiAngular
 } from "react-icons/si";
 import { 
   Shield, Lock, Workflow, Trello, Code2, Brain, Sparkles, 
@@ -44,7 +45,8 @@ const skillCategories: SkillCategory[] = [
       { name: "Sass", icon: SiSass, color: "#CC6699" },
       { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
       { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000" }
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Angular", icon: SiAngular, color: "#DD0031" }
     ]
   },
   {
