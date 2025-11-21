@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { 
-  SiPhp, SiJavascript, SiTypescript, SiPython, SiNodedotjs, SiCplusplus,
+  SiPhp, SiJavascript, SiTypescript, SiPython, SiNodedotjs,
   SiHtml5, SiCss3, SiSass, SiVuedotjs, SiReact, SiNextdotjs,
   SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
   SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
-  SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
-  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube, SiGithubactions,
-  SiAngular
+  SiAmazon, SiGooglecloud, SiDocker, SiGit, SiJira,
+  SiSwagger, SiOpenai, SiSonarqube, SiGithubactions,
+  SiAngular, SiJest, SiPytest
 } from "react-icons/si";
 import { 
   Shield, Lock, Workflow, Trello, Code2, Brain, Sparkles, 
@@ -84,7 +84,8 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "OWASP TOP 10", icon: Shield, color: "#000000" },
       { name: "ISO 27001", icon: Lock, color: "#0066CC" },
-      { name: "SonarQube", icon: SiSonarqube, color: "#4E9BCD" }
+      { name: "SonarQube", icon: SiSonarqube, color: "#4E9BCD" },
+      { name: "SAST", icon: Shield, color: "#000000" }
     ]
   },
   {
@@ -95,6 +96,14 @@ const skillCategories: SkillCategory[] = [
       { name: "Rasa", icon: Shield, color: "#5A17EE" },
       { name: "OpenAI", icon: SiOpenai, color: "#412991" },
       { name: "GenAI", icon: Brain, color: "#006699" }
+    ]
+  },
+  {
+    title: "Testing / QA",
+    skills: [
+      { name: "Jest", icon: SiJest, color: "#C21325" },
+      { name: "Pytest", icon: SiPytest, color: "#0A9EDC" },
+      { name: "PHPUnit", icon: SiPhp, color: "#777BB4" }
     ]
   },
   {
