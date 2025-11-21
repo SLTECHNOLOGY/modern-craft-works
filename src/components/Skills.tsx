@@ -5,9 +5,13 @@ import {
   SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
   SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
-  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube
+  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube, SiGithubactions
 } from "react-icons/si";
-import { Shield, Lock, Workflow, Trello, Code2, Brain } from "lucide-react";
+import { 
+  Shield, Lock, Workflow, Trello, Code2, Brain, Sparkles, 
+  Droplets, Layers, FileText, Grid3x3, Building2, TrendingUp, 
+  GitBranch, RotateCw 
+} from "lucide-react";
 import { IconType } from "react-icons";
 
 interface Skill {
@@ -106,7 +110,17 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Scrum", icon: Workflow, color: "#009FDA" },
       { name: "Kanban", icon: Trello, color: "#0079BF" },
-      { name: "SOLID", icon: Code2, color: "#FF6B6B" }
+      { name: "SOLID", icon: Code2, color: "#FF6B6B" },
+      { name: "KISS", icon: Sparkles, color: "#FFB800" },
+      { name: "DRY", icon: Droplets, color: "#00BCD4" },
+      { name: "C4 Model", icon: Layers, color: "#9C27B0" },
+      { name: "ADR", icon: FileText, color: "#4CAF50" },
+      { name: "Design Patterns", icon: Grid3x3, color: "#FF5722" },
+      { name: "Arquitectura", icon: Building2, color: "#607D8B" },
+      { name: "Big O", icon: TrendingUp, color: "#E91E63" },
+      { name: "CI/CD", icon: GitBranch, color: "#00C853" },
+      { name: "Github Actions", icon: SiGithubactions, color: "#2088FF" },
+      { name: "SDLC", icon: RotateCw, color: "#FF9800" }
     ]
   }
 ];
