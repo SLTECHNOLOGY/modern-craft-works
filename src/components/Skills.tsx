@@ -5,8 +5,9 @@ import {
   SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
   SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiGitlab, SiJira,
-  SiSwagger, SiStripe, SiWhatsapp, SiOpenai
+  SiSwagger, SiStripe, SiWhatsapp, SiOpenai, SiSonarqube
 } from "react-icons/si";
+import { Shield, Lock, Workflow, Trello, Code2, Brain } from "lucide-react";
 import { IconType } from "react-icons";
 
 interface Skill {
@@ -86,26 +87,26 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Security",
     skills: [
-      { name: "OWASP", color: "#000000" },
-      { name: "ISO 27001" },
-      { name: "SonarQube" }
+      { name: "OWASP", icon: Shield, color: "#000000" },
+      { name: "ISO 27001", icon: Lock, color: "#0066CC" },
+      { name: "SonarQube", icon: SiSonarqube, color: "#4E9BCD" }
     ]
   },
   {
     title: "AI & ML",
     skills: [
-      { name: "IBM Watson", color: "#006699" },
-      { name: "Dialogflow" },
-      { name: "Rasa" },
+      { name: "IBM Watson", icon: Brain, color: "#006699" },
+      { name: "Dialogflow", icon: Shield, color: "#FF9800" },
+      { name: "Rasa", icon: Shield, color: "#5A17EE" },
       { name: "OpenAI", icon: SiOpenai, color: "#412991" }
     ]
   },
   {
     title: "Methodology",
     skills: [
-      { name: "Scrum" },
-      { name: "Kanban" },
-      { name: "SOLID" }
+      { name: "Scrum", icon: Workflow, color: "#009FDA" },
+      { name: "Kanban", icon: Trello, color: "#0079BF" },
+      { name: "SOLID", icon: Code2, color: "#FF6B6B" }
     ]
   }
 ];
