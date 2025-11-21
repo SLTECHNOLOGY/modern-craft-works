@@ -154,21 +154,21 @@ const Experience = () => {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       {job.logo ? (
-                        <div className="p-2 rounded-lg bg-background border border-border/50">
-                          <job.logo className="w-6 h-6" style={{ color: job.logoColor }} />
-                        </div>
+                        <>
+                          <div className="p-2 rounded-lg bg-background border border-border/50">
+                            <job.logo className="w-6 h-6" style={{ color: job.logoColor }} />
+                          </div>
+                          <CardDescription className="text-base font-semibold text-foreground/80">
+                            {job.company}
+                          </CardDescription>
+                        </>
                       ) : (
                         <div 
-                          className="px-3 py-1 rounded-lg bg-background border border-border/50 text-sm font-semibold"
-                          style={{ color: job.logoColor }}
+                          className="px-3 py-1.5 rounded-lg bg-background border-2 text-sm font-bold text-foreground"
+                          style={{ borderColor: job.logoColor }}
                         >
                           {job.company}
                         </div>
-                      )}
-                      {job.logo && (
-                        <CardDescription className="text-base font-semibold text-foreground/80">
-                          {job.company}
-                        </CardDescription>
                       )}
                     </div>
                     <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
