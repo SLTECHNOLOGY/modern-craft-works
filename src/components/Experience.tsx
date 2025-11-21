@@ -5,12 +5,14 @@ import { IconType } from "react-icons";
 import { 
   SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiNeo4J, SiAmazon, SiGooglecloud,
   SiSwagger, SiTypescript, SiNextdotjs, SiNodedotjs, SiMongodb, SiRedis, SiDocker, 
-  SiGitlab, SiStripe, SiWhatsapp, SiGraphql, SiVuedotjs, SiLaravel, SiNestjs
+  SiGitlab, SiStripe, SiWhatsapp, SiGraphql, SiVuedotjs, SiLaravel, SiNestjs,
+  SiOpenai, SiSap, SiAngular, SiGooglegemini
 } from "react-icons/si";
+import { Shield, Brain, Cloud } from "lucide-react";
 
 interface Technology {
   name: string;
-  icon?: IconType;
+  icon?: IconType | React.ComponentType<{ className?: string }>;
   color?: string;
 }
 
@@ -25,7 +27,7 @@ interface Job {
   technologies: Technology[];
 }
 
-const techMap: Record<string, { icon?: IconType; color?: string }> = {
+const techMap: Record<string, { icon?: IconType | React.ComponentType<{ className?: string }>; color?: string }> = {
   "Python": { icon: SiPython, color: "#3776AB" },
   "JavaScript": { icon: SiJavascript, color: "#F7DF1E" },
   "Flask": { icon: SiFlask, color: "#000000" },
@@ -34,8 +36,8 @@ const techMap: Record<string, { icon?: IconType; color?: string }> = {
   "Neo4j": { icon: SiNeo4J, color: "#008CC1" },
   "AWS": { icon: SiAmazon, color: "#FF9900" },
   "GCP": { icon: SiGooglecloud, color: "#4285F4" },
-  "GenAI": { color: "#FF6B6B" },
-  "OWASP Top 10": { color: "#000000" },
+  "GenAI": { icon: SiGooglegemini, color: "#8E75FF" },
+  "OWASP Top 10": { icon: Shield, color: "#000000" },
   "TypeScript": { icon: SiTypescript, color: "#3178C6" },
   "Next.js": { icon: SiNextdotjs, color: "#000000" },
   "NestJs": { icon: SiNestjs, color: "#E0234E" },
@@ -46,15 +48,17 @@ const techMap: Record<string, { icon?: IconType; color?: string }> = {
   "WhatsApp API": { icon: SiWhatsapp, color: "#25D366" },
   "Node.js": { icon: SiNodedotjs, color: "#339933" },
   "GraphQL": { icon: SiGraphql, color: "#E10098" },
-  "OpenAI": { color: "#412991" },
-  "Dialogflow": { color: "#FF9800" },
-  "Rasa": { color: "#5A17EE" },
+  "OpenAI": { icon: SiOpenai, color: "#412991" },
+  "Dialogflow": { icon: Brain, color: "#FF9800" },
+  "Rasa": { icon: Brain, color: "#5A17EE" },
   "Vue.js": { icon: SiVuedotjs, color: "#4FC08D" },
   "Laravel": { icon: SiLaravel, color: "#FF2D20" },
-  "Azure DevOps": { color: "#0078D4" },
-  "Angular": { color: "#DD0031" },
+  "Azure DevOps": { icon: Cloud, color: "#0078D4" },
+  "Angular": { icon: SiAngular, color: "#DD0031" },
   "Swagger": { icon: SiSwagger, color: "#85EA2D" },
-  "GitLab": { icon: SiGitlab, color: "#FC6D26" }
+  "GitLab": { icon: SiGitlab, color: "#FC6D26" },
+  "IBM Watson": { icon: Brain, color: "#006699" },
+  "SAP": { icon: SiSap, color: "#0FAAFF" }
 };
 
 const jobs: Job[] = [
