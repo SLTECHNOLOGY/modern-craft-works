@@ -7,7 +7,7 @@ import {
   SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiNeo4J, SiAmazon, SiGooglecloud,
   SiSwagger, SiTypescript, SiNextdotjs, SiNodedotjs, SiMongodb, SiRedis, SiDocker, 
   SiGitlab, SiStripe, SiWhatsapp, SiGraphql, SiVuedotjs, SiLaravel, SiNestjs,
-  SiOpenai, SiSap, SiAngular, SiGooglegemini
+  SiOpenai, SiSap, SiAngular, SiGooglegemini, SiDigitalocean
 } from "react-icons/si";
 import { Shield, Brain, Cloud } from "lucide-react";
 
@@ -59,7 +59,8 @@ const techMap: Record<string, { icon?: IconType | React.ComponentType<{ classNam
   "Swagger": { icon: SiSwagger, color: "#85EA2D" },
   "GitLab": { icon: SiGitlab, color: "#FC6D26" },
   "IBM Watson": { icon: Brain, color: "#006699" },
-  "SAP": { icon: SiSap, color: "#0FAAFF" }
+  "SAP": { icon: SiSap, color: "#0FAAFF" },
+  "Digital Ocean": { icon: SiDigitalocean, color: "#0080FF" }
 };
 
 const jobs: Job[] = [
@@ -83,7 +84,7 @@ const jobs: Job[] = [
     period: "12/2023 – 06/2024",
     location: "Medellín, Antioquia",
     description: "Proyecto Tyfyr. Desarrollo de plataforma e-commerce con integraciones de pago y mensajería.",
-    technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Stripe", "WhatsApp API"].map(name => ({
+    technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Digital Ocean", "Stripe", "WhatsApp API"].map(name => ({
       name,
       icon: techMap[name]?.icon,
       color: techMap[name]?.color
