@@ -40,7 +40,15 @@
     "title": "Experiencia",
     "titleHighlight": "Profesional",
     "subtitle": "Más de 6 años construyendo soluciones tecnológicas innovadoras",
-    "present": "Presente"
+    "present": "Presente",
+    "problem": "Problema",
+    "solution": "Solución",
+    "result": "Resultado",
+    "mercadoLibre": {
+      "problem": "El proceso de gestión de alertas era totalmente manual: tomaba 1–2 horas por alerta, generaba errores y frenaba la operación. No existía una arquitectura clara ni un sistema centralizado para clasificación, escalamiento y análisis. Equipos internos dependían de análisis humanos lentos y poco consistentes.",
+      "solution": "Diseñé y construí desde cero AutomateX, una plataforma completa con arquitectura hexagonal, C4, ADRs y casos de uso claramente definidos. Implementé flujos automáticos de clasificación con LLMs + reglas del dominio. Integré servicios internos de Mercado Libre (Fury, GCP, AWS). Estandaricé documentación y patrones para facilitar onboarding.",
+      "result": "Reducción radical del tiempo de gestión: de 1–2 horas → 3–6 segundos. Eliminación de errores manuales y aumento de trazabilidad. La herramienta fue adoptada por +4 equipos internos como referencia operativa. Mejora sustancial en eficiencia operativa y calidad de datos."
+    }
   },
   "footer": {
     "title": "¿Trabajamos juntos?",
