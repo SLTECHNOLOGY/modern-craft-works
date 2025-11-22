@@ -45,9 +45,10 @@
     "solution": "Solution",
     "result": "Result",
     "mercadoLibre": {
-      "problem": "The alert management process was completely manual: it took 1–2 hours per alert, generated errors and slowed down operations. There was no clear architecture or centralized system for classification, escalation and analysis. Internal teams depended on slow and inconsistent human analysis.",
-      "solution": "I designed and built AutomateX from scratch, a complete platform with hexagonal architecture, C4, ADRs and clearly defined use cases. I implemented automatic classification flows with LLMs + domain rules. I integrated Mercado Libre internal services (Fury, GCP, AWS). I standardized documentation and patterns to facilitate onboarding.",
-      "result": "Radical reduction in management time: from 1–2 hours → 3–6 seconds. Elimination of manual errors and increased traceability. The tool was adopted by +4 internal teams as an operational reference. Substantial improvement in operational efficiency and data quality."
+      "description":"Detection and response application for Crypto Security. Automatically classifies alerts as false positives, incidents, or security events and autonomously decides whether to escalate or close them. Reduces operational load, eliminates manual errors, and speeds up response times.",
+      "problem": "The alert-management process was fully manual: each alert took 1\u20132 hours, caused frequent errors, and slowed down operations. There was no clear architecture or centralized system for classification, escalation, and analysis. Internal teams relied on slow and inconsistent human reviews.",
+      "solution": "I designed and built AutomateX from scratch \u2014 a full platform with Hexagonal Architecture, C4 diagrams, ADRs, and clearly defined use cases. I implemented automated classification flows using LLMs combined with domain rules. I standardized documentation and patterns to streamline onboarding.",
+      "result": "Drastically reduced processing time: from 1\u20132 hours \u2192 3\u20136 seconds. Eliminated manual errors and improved traceability. The tool was adopted by 4+ internal teams as an operational reference. Significant improvement in operational efficiency and data quality."
     }
   },
   "footer": {

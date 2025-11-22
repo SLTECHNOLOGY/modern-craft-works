@@ -75,17 +75,17 @@ const jobs: Job[] = [
     position: "CS Software Engineer",
     period: "06/2024 – 09/2025",
     location: "Medellín, Colombia",
-    description: "Creador del proyecto AutomateX en CryptoSecurity. Desarrollo de soluciones de seguridad automatizadas utilizando IA generativa y múltiples LLM.",
+    description: "experience.mercadoLibre.description",
     technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "Neo4j", "AWS", "GCP", "GenAI", "OWASP Top 10"].map(name => ({
       name,
       icon: techMap[name]?.icon,
       color: techMap[name]?.color
     })),
-    details: {
-      problem: "experience.mercadoLibre.problem",
-      solution: "experience.mercadoLibre.solution",
-      result: "experience.mercadoLibre.result"
-    }
+    //details: {
+      //problem: "experience.mercadoLibre.problem",
+      //solution: "experience.mercadoLibre.solution",
+      //result: "experience.mercadoLibre.result"
+    //}
   },
   {
     company: "Idea Latente",
@@ -93,7 +93,7 @@ const jobs: Job[] = [
     position: "Senior Full Stack Development Engineer",
     period: "12/2023 – 06/2024",
     location: "Medellín, Antioquia",
-    description: "Proyecto Tyfyr. Desarrollo de plataforma e-commerce con integraciones de pago y mensajería.",
+    description: "Proyecto Tyfyr. Plataforma e-commerce usando VTEX por debajo, con integración de pagos y mensajería. Incluye creación de campañas publicitarias y aplicación de descuentos masivos automáticos.",
     technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Digital Ocean", "Stripe", "WhatsApp API"].map(name => ({
       name,
       icon: techMap[name]?.icon,
@@ -106,7 +106,9 @@ const jobs: Job[] = [
     position: "IVA Developer Jr",
     period: "03/2023 – 12/2023",
     location: "Medellín, Colombia",
-    description: "Proyectos GenAI, Athena for Audio PC, IVA Factory Intelligent Virtual Assistant. Desarrollo de asistentes virtuales inteligentes con IA.",
+    description: "Proyectos \u2014 GenAI, Athena for Audio PC, IVA Factory, Web-Scraping Assistant. Desarrollo de asistentes virtuales y agentes de IA. Incluye un asistente de web-scraping para extraer datos de sitios web; Athena for Audio PC, que reemplazo multiples servicios de AWS reduciendo costos; e IVA Factory, plataforma para crear chatbots avanzados con Dialogflow, Rasa, OpenAI o enfoques hibridos."
+
+,
     technologies: ["TypeScript", "React", "Angular", "Node.js", "GraphQL", "AWS", "OpenAI", "Dialogflow", "Rasa"].map(name => ({
       name,
       icon: techMap[name]?.icon,
@@ -132,7 +134,7 @@ const jobs: Job[] = [
     position: "Technical Support Specialist",
     period: "04/2019 – 08/2020",
     location: "Medellín, Colombia",
-    description: "Proyecto Grupo Familia CAU. Implementación de soluciones con IA en SAP y automatización de procesos.",
+    description: "Proyecto Grupo Familia CAU. Implementación de soluciones con IA chatbots internos, SAP y automatización de procesos.",
     technologies: ["Node.js", "IBM Watson", "SAP"].map(name => ({
       name,
       icon: techMap[name]?.icon,
@@ -206,7 +208,7 @@ const Experience = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground/90 mb-4">
-                  {job.description}
+                  {t(job.description)}
                 </p>
                 
                 {job.details && (
