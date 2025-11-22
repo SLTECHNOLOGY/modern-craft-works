@@ -14,6 +14,7 @@ import {
   GitBranch, RotateCw 
 } from "lucide-react";
 import { IconType } from "react-icons";
+import { useTranslation } from 'react-i18next';
 
 interface Skill {
   name: string;
@@ -128,15 +129,17 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const Skills = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 px-4" id="skills">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Habilidades <span className="gradient-text">Técnicas</span>
+            {t('skills.title')} <span className="gradient-text">{t('skills.titleHighlight')}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Stack tecnológico completo para desarrollar soluciones end-to-end
+            {t('skills.subtitle')}
           </p>
         </div>
         

@@ -1,39 +1,42 @@
 import { Card } from "@/components/ui/card";
 import { Code2, Rocket, Users, TrendingUp } from "lucide-react";
-
-const highlights = [
-  {
-    icon: Code2,
-    title: "Código Limpio",
-    description: "Desarrollo estructurado y orientado a la mantenibilidad siguiendo principios SOLID y mejores prácticas."
-  },
-  {
-    icon: Rocket,
-    title: "Alto Rendimiento",
-    description: "Enfoque en escalabilidad, optimización y arquitecturas robustas que soportan crecimiento."
-  },
-  {
-    icon: Users,
-    title: "Liderazgo Técnico",
-    description: "Colaboración efectiva en equipos multidisciplinarios ágiles con mentalidad de ownership."
-  },
-  {
-    icon: TrendingUp,
-    title: "Mejora Continua",
-    description: "Aprendizaje constante de nuevas tecnologías y metodologías para aportar soluciones innovadoras."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+  
+  const highlights = [
+    {
+      icon: Code2,
+      titleKey: "about.cleanCode.title",
+      descriptionKey: "about.cleanCode.description"
+    },
+    {
+      icon: Rocket,
+      titleKey: "about.highPerformance.title",
+      descriptionKey: "about.highPerformance.description"
+    },
+    {
+      icon: Users,
+      titleKey: "about.technicalLeadership.title",
+      descriptionKey: "about.technicalLeadership.description"
+    },
+    {
+      icon: TrendingUp,
+      titleKey: "about.continuousImprovement.title",
+      descriptionKey: "about.continuousImprovement.description"
+    }
+  ];
+  
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background to-card/30" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Lo que <span className="gradient-text">aporto</span>
+            {t('about.title')} <span className="gradient-text">{t('about.titleHighlight')}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Transformando ideas en productos digitales de impacto
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -42,7 +45,7 @@ const About = () => {
             const Icon = item.icon;
             return (
               <Card 
-                key={item.title}
+                key={item.titleKey}
                 className="p-8 glass-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 border-border/50 group animate-slide-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
@@ -51,8 +54,8 @@ const About = () => {
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                    <h3 className="text-xl font-semibold mb-2">{t(item.titleKey)}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t(item.descriptionKey)}</p>
                   </div>
                 </div>
               </Card>
@@ -61,15 +64,14 @@ const About = () => {
         </div>
 
         <Card className="p-8 md:p-12 glass-card border-border/50 animate-slide-up" style={{ animationDelay: "0.4s" }}>
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Mi objetivo</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-6">{t('about.objective')}</h3>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            He participado en todo el ciclo de desarrollo: desde el diseño de arquitecturas 
-            y APIs hasta la implementación de interfaces dinámicas, intuitivas y mantenibles.
+            {t('about.objectiveText1')}
           </p>
           <p className="text-lg text-foreground leading-relaxed">
-            Busco seguir creciendo como ingeniero senior, aportando{" "}
-            <span className="text-primary font-semibold">soluciones tecnológicas de alto impacto</span>{" "}
-            que unan innovación, calidad y eficiencia en cada proyecto.
+            {t('about.objectiveText2')}{" "}
+            <span className="text-primary font-semibold">{t('about.objectiveText2Highlight')}</span>{" "}
+            {t('about.objectiveText2End')}
           </p>
         </Card>
       </div>
