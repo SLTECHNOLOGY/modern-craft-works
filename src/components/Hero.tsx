@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Gradient background effect */}
@@ -21,7 +24,7 @@ const Hero = () => {
         </div>
         
         <div className="inline-block mb-4 px-4 py-2 rounded-full glass-card">
-          <span className="text-sm text-muted-foreground">Full Stack Software Engineer</span>
+          <span className="text-sm text-muted-foreground">{t('hero.role')}</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -29,12 +32,11 @@ const Hero = () => {
         </h1>
         
         <p className="text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground">
-          Construyendo soluciones digitales escalables
+          {t('hero.subtitle')}
         </p>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          Desarrollo aplicaciones web modernas y de alto rendimiento que transforman 
-          la experiencia del usuario y optimizan los procesos de negocio.
+          {t('hero.description')}
         </p>
         
         <div className="flex gap-4 justify-center items-center flex-wrap">
@@ -44,7 +46,7 @@ const Hero = () => {
             disabled={true}
             className="border-border hover:bg-card/50 backdrop-blur-sm"
           >
-            Contáctame
+            {t('hero.contact')}
           </Button>
         </div>
         

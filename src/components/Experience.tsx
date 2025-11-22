@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, Calendar } from "lucide-react";
 import { IconType } from "react-icons";
+import { useTranslation } from 'react-i18next';
 import { 
   SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiNeo4J, SiAmazon, SiGooglecloud,
   SiSwagger, SiTypescript, SiNextdotjs, SiNodedotjs, SiMongodb, SiRedis, SiDocker, 
@@ -130,6 +131,8 @@ const jobs: Job[] = [
 ];
 
 const Experience = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 px-4 md:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
@@ -139,10 +142,10 @@ const Experience = () => {
             <span className="text-sm font-medium">Trayectoria</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            Experiencia Profesional
+            {t('experience.title')} {t('experience.titleHighlight')}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Más de 6 años construyendo soluciones tecnológicas innovadoras
+            {t('experience.subtitle')}
           </p>
         </div>
 

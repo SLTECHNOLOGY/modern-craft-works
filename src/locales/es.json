@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "role": "Full Stack Software Engineer",
+    "subtitle": "Construyendo soluciones digitales escalables",
+    "description": "Desarrollo aplicaciones web modernas y de alto rendimiento que transforman la experiencia del usuario y optimizan los procesos de negocio.",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "title": "Lo que",
+    "titleHighlight": "aporto",
+    "subtitle": "Transformando ideas en productos digitales de impacto",
+    "cleanCode": {
+      "title": "Código Limpio",
+      "description": "Desarrollo estructurado y orientado a la mantenibilidad siguiendo principios SOLID y mejores prácticas."
+    },
+    "highPerformance": {
+      "title": "Alto Rendimiento",
+      "description": "Enfoque en escalabilidad, optimización y arquitecturas robustas que soportan crecimiento."
+    },
+    "technicalLeadership": {
+      "title": "Liderazgo Técnico",
+      "description": "Colaboración efectiva en equipos multidisciplinarios ágiles con mentalidad de ownership."
+    },
+    "continuousImprovement": {
+      "title": "Mejora Continua",
+      "description": "Aprendizaje constante de nuevas tecnologías y metodologías para aportar soluciones innovadoras."
+    },
+    "objective": "Mi objetivo",
+    "objectiveText1": "He participado en todo el ciclo de desarrollo: desde el diseño de arquitecturas y APIs hasta la implementación de interfaces dinámicas, intuitivas y mantenibles.",
+    "objectiveText2": "Busco seguir creciendo como ingeniero senior, aportando",
+    "objectiveText2Highlight": "soluciones tecnológicas de alto impacto",
+    "objectiveText2End": "que unan innovación, calidad y eficiencia en cada proyecto."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "titleHighlight": "Técnicas",
+    "subtitle": "Stack tecnológico completo para desarrollar soluciones end-to-end"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "titleHighlight": "Profesional",
+    "subtitle": "Más de 6 años construyendo soluciones tecnológicas innovadoras",
+    "present": "Presente"
+  },
+  "footer": {
+    "title": "¿Trabajamos juntos?",
+    "subtitle": "Disponible para proyectos y oportunidades",
+    "copyright": "© 2025 Steven Alexander Hernández Jiménez. Construido con React, TypeScript y Tailwind CSS."
+  }
+}

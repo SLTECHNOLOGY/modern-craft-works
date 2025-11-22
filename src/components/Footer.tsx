@@ -1,14 +1,17 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   return (
     <footer className="py-12 px-4 border-t border-border/50">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-2">¿Trabajamos juntos?</h3>
+            <h3 className="text-xl font-bold mb-2">{t('footer.title')}</h3>
             <p className="text-muted-foreground">
-              Disponible para proyectos y oportunidades
+              {t('footer.subtitle')}
             </p>
           </div>
           
@@ -42,7 +45,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-border/30 text-center text-muted-foreground text-sm">
-          <p>© 2025 Steven Alexander Hernández Jiménez. Construido con React, TypeScript y Tailwind CSS.</p>
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

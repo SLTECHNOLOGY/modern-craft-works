@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "role": "Full Stack Software Engineer",
+    "subtitle": "Building scalable digital solutions",
+    "description": "I develop modern, high-performance web applications that transform user experience and optimize business processes.",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "What I",
+    "titleHighlight": "bring",
+    "subtitle": "Transforming ideas into impactful digital products",
+    "cleanCode": {
+      "title": "Clean Code",
+      "description": "Structured development focused on maintainability following SOLID principles and best practices."
+    },
+    "highPerformance": {
+      "title": "High Performance",
+      "description": "Focus on scalability, optimization and robust architectures that support growth."
+    },
+    "technicalLeadership": {
+      "title": "Technical Leadership",
+      "description": "Effective collaboration in agile multidisciplinary teams with ownership mindset."
+    },
+    "continuousImprovement": {
+      "title": "Continuous Improvement",
+      "description": "Constant learning of new technologies and methodologies to provide innovative solutions."
+    },
+    "objective": "My goal",
+    "objectiveText1": "I have participated in the entire development cycle: from designing architectures and APIs to implementing dynamic, intuitive and maintainable interfaces.",
+    "objectiveText2": "I seek to continue growing as a senior engineer, providing",
+    "objectiveText2Highlight": "high-impact technological solutions",
+    "objectiveText2End": "that unite innovation, quality and efficiency in each project."
+  },
+  "skills": {
+    "title": "Technical",
+    "titleHighlight": "Skills",
+    "subtitle": "Complete technology stack to develop end-to-end solutions"
+  },
+  "experience": {
+    "title": "Professional",
+    "titleHighlight": "Experience",
+    "subtitle": "More than 6 years building innovative technological solutions",
+    "present": "Present"
+  },
+  "footer": {
+    "title": "Let's work together?",
+    "subtitle": "Available for projects and opportunities",
+    "copyright": "© 2025 Steven Alexander Hernández Jiménez. Built with React, TypeScript and Tailwind CSS."
+  }
+}
