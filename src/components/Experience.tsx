@@ -26,6 +26,11 @@ interface Job {
   location: string;
   description: string;
   technologies: Technology[];
+  details?: {
+    problem?: string;
+    solution?: string;
+    result?: string;
+  };
 }
 
 const techMap: Record<string, { icon?: IconType | React.ComponentType<{ className?: string }>; color?: string }> = {
@@ -75,7 +80,12 @@ const jobs: Job[] = [
       name,
       icon: techMap[name]?.icon,
       color: techMap[name]?.color
-    }))
+    })),
+    details: {
+      problem: "experience.mercadoLibre.problem",
+      solution: "experience.mercadoLibre.solution",
+      result: "experience.mercadoLibre.result"
+    }
   },
   {
     company: "Idea Latente",
@@ -198,6 +208,42 @@ const Experience = () => {
                 <p className="text-foreground/90 mb-4">
                   {job.description}
                 </p>
+                
+                {job.details && (
+                  <div className="space-y-4 mb-6">
+                    {job.details.problem && (
+                      <div className="bg-muted/30 rounded-lg p-4 border border-border/30">
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span className="text-destructive">•</span> {t('experience.problem')}
+                        </h4>
+                        <p className="text-sm text-foreground/80 leading-relaxed">
+                          {t(job.details.problem)}
+                        </p>
+                      </div>
+                    )}
+                    {job.details.solution && (
+                      <div className="bg-muted/30 rounded-lg p-4 border border-border/30">
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span className="text-primary">•</span> {t('experience.solution')}
+                        </h4>
+                        <p className="text-sm text-foreground/80 leading-relaxed">
+                          {t(job.details.solution)}
+                        </p>
+                      </div>
+                    )}
+                    {job.details.result && (
+                      <div className="bg-muted/30 rounded-lg p-4 border border-border/30">
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                          <span className="text-green-500">•</span> {t('experience.result')}
+                        </h4>
+                        <p className="text-sm text-foreground/80 leading-relaxed">
+                          {t(job.details.result)}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
                 <div className="flex flex-wrap gap-3">
                   {job.technologies.map((tech) => {
                     const Icon = tech.icon;

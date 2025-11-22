@@ -40,7 +40,15 @@
     "title": "Professional",
     "titleHighlight": "Experience",
     "subtitle": "More than 6 years building innovative technological solutions",
-    "present": "Present"
+    "present": "Present",
+    "problem": "Problem",
+    "solution": "Solution",
+    "result": "Result",
+    "mercadoLibre": {
+      "problem": "The alert management process was completely manual: it took 1–2 hours per alert, generated errors and slowed down operations. There was no clear architecture or centralized system for classification, escalation and analysis. Internal teams depended on slow and inconsistent human analysis.",
+      "solution": "I designed and built AutomateX from scratch, a complete platform with hexagonal architecture, C4, ADRs and clearly defined use cases. I implemented automatic classification flows with LLMs + domain rules. I integrated Mercado Libre internal services (Fury, GCP, AWS). I standardized documentation and patterns to facilitate onboarding.",
+      "result": "Radical reduction in management time: from 1–2 hours → 3–6 seconds. Elimination of manual errors and increased traceability. The tool was adopted by +4 internal teams as an operational reference. Substantial improvement in operational efficiency and data quality."
+    }
   },
   "footer": {
     "title": "Let's work together?",
