@@ -148,7 +148,7 @@ const jobs: Job[] = [
     company: "Freelance",
     logoColor: "#E30613",
     position: "Developer Web",
-    period: "04/2018 – 04/2019",
+    period: "01/2018 – 01/2019",
     location: "Medellín, Colombia",
     description: "Diseñé y desarrollé proyectos personalizados para pequeños emprendedores, alineados con las necesidades específicas de sus negocios.",
     technologies: ["React", "ReactNative", "csharp", "Goland", "JavaScript"].map(name => ({
