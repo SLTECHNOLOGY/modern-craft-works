@@ -3,7 +3,7 @@ import {
   SiPhp, SiJavascript, SiTypescript, SiPython, SiNodedotjs,
   SiHtml5, SiCss3, SiSass, SiVuedotjs, SiReact, SiNextdotjs,
   SiLaravel, SiFlask, SiExpress, SiNestjs, SiGraphql,
-  SiMysql, SiMongodb, SiSqlite, SiRedis, SiNeo4J,
+  SiMysql, SiMongodb, SiSqlite, SiRedis,
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiJira,
   SiSwagger, SiOpenai, SiSonarqube, SiGithubactions,
   SiAngular, SiJest, SiPytest
@@ -46,6 +46,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Sass", icon: SiSass, color: "#CC6699" },
       { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
       { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "ReactNative", icon: SiReact, color: "#61DAFB" },
       { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
       { name: "Angular", icon: SiAngular, color: "#DD0031" }
     ]
@@ -67,7 +68,6 @@ const skillCategories: SkillCategory[] = [
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "SQLite", icon: SiSqlite, color: "#003B57" },
       { name: "Redis", icon: SiRedis, color: "#DC382D" },
-      { name: "Neo4j", icon: SiNeo4J, color: "#008CC1" }
     ]
   },
   {

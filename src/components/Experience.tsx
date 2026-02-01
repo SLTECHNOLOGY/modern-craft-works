@@ -4,10 +4,11 @@ import { Briefcase, Calendar } from "lucide-react";
 import { IconType } from "react-icons";
 import { useTranslation } from 'react-i18next';
 import { 
-  SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiNeo4J, SiAmazon, SiGooglecloud,
+  SiPython, SiJavascript, SiFlask, SiReact, SiMysql, SiAmazon, SiGooglecloud,
   SiSwagger, SiTypescript, SiNextdotjs, SiNodedotjs, SiMongodb, SiRedis, SiDocker, 
   SiGitlab, SiStripe, SiWhatsapp, SiGraphql, SiVuedotjs, SiLaravel, SiNestjs,
-  SiOpenai, SiSap, SiAngular, SiGooglegemini, SiDigitalocean
+  SiOpenai, SiSap, SiAngular, SiGooglegemini, SiDigitalocean,
+  SiGoland, SiSharp
 } from "react-icons/si";
 import { Shield, Brain, Cloud } from "lucide-react";
 
@@ -39,7 +40,6 @@ const techMap: Record<string, { icon?: IconType | React.ComponentType<{ classNam
   "Flask": { icon: SiFlask, color: "#000000" },
   "React": { icon: SiReact, color: "#61DAFB" },
   "MySQL": { icon: SiMysql, color: "#4479A1" },
-  "Neo4j": { icon: SiNeo4J, color: "#008CC1" },
   "AWS": { icon: SiAmazon, color: "#FF9900" },
   "GCP": { icon: SiGooglecloud, color: "#4285F4" },
   "GenAI": { icon: SiGooglegemini, color: "#8E75FF" },
@@ -65,7 +65,10 @@ const techMap: Record<string, { icon?: IconType | React.ComponentType<{ classNam
   "GitLab": { icon: SiGitlab, color: "#FC6D26" },
   "IBM Watson": { icon: Brain, color: "#006699" },
   "SAP": { icon: SiSap, color: "#0FAAFF" },
-  "Digital Ocean": { icon: SiDigitalocean, color: "#0080FF" }
+  "Digital Ocean": { icon: SiDigitalocean, color: "#0080FF" },
+  "Goland": { icon: SiGoland, color: "#00ADD8" },
+  "ReactNative": { icon: SiReact, color: "#61DAFB" },
+  "csharp": { icon: SiSharp, color: "#239122" },
 };
 
 const jobs: Job[] = [
@@ -76,7 +79,7 @@ const jobs: Job[] = [
     period: "06/2024 – 09/2025",
     location: "Medellín, Colombia",
     description: "experience.mercadoLibre.description",
-    technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "Neo4j", "AWS", "GCP", "GenAI", "OWASP Top 10"].map(name => ({
+    technologies: ["Python", "JavaScript", "Flask", "React", "MySQL", "AWS", "GCP", "GenAI", "OWASP Top 10"].map(name => ({
       name,
       icon: techMap[name]?.icon,
       color: techMap[name]?.color
@@ -96,7 +99,7 @@ const jobs: Job[] = [
     description: "Proyecto Tyfyr. Plataforma e-commerce usando VTEX por debajo, con integración de pagos y mensajería. Incluye creación de campañas publicitarias y aplicación de descuentos masivos automáticos.",
     technologies: ["TypeScript", "React", "Next.js", "NestJs", "MongoDB", "Redis", "Docker", "Digital Ocean", "Stripe", "WhatsApp API"].map(name => ({
       name,
-      icon: techMap[name]?.icon,
+      icon: techMap[name]?.icon, 
       color: techMap[name]?.color
     }))
   },
@@ -134,8 +137,21 @@ const jobs: Job[] = [
     position: "Technical Support Specialist",
     period: "04/2019 – 08/2020",
     location: "Medellín, Colombia",
-    description: "Proyecto Grupo Familia CAU. Implementación de soluciones con IA chatbots internos, SAP y automatización de procesos.",
-    technologies: ["Node.js", "IBM Watson", "SAP"].map(name => ({
+    description: "Proyecto Grupo Familia CAU. Implementación de soluciones con IA chatbots internos, automatización de procesos y soporte.",
+    technologies: ["Node.js", "Javascript", "IBM Watson"].map(name => ({
+      name,
+      icon: techMap[name]?.icon,
+      color: techMap[name]?.color
+    }))
+  },
+  {
+    company: "Freelance",
+    logoColor: "#E30613",
+    position: "Developer Web",
+    period: "04/2018 – 04/2019",
+    location: "Medellín, Colombia",
+    description: "Diseñé y desarrollé proyectos personalizados para pequeños emprendedores, alineados con las necesidades específicas de sus negocios.",
+    technologies: ["React", "ReactNative", "csharp", "Goland", "JavaScript"].map(name => ({
       name,
       icon: techMap[name]?.icon,
       color: techMap[name]?.color
