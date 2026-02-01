@@ -6,7 +6,9 @@ import {
   SiMysql, SiMongodb, SiSqlite, SiRedis,
   SiAmazon, SiGooglecloud, SiDocker, SiGit, SiJira,
   SiSwagger, SiOpenai, SiSonarqube, SiGithubactions,
-  SiAngular, SiJest, SiPytest
+  SiAngular, SiJest, SiPytest,
+  SiSharp,
+  SiGoland
 } from "react-icons/si";
 import { 
   Shield, Lock, Workflow, Trello, Code2, Brain, Sparkles, 
@@ -35,7 +37,9 @@ const skillCategories: SkillCategory[] = [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "Node.js", icon: SiNodedotjs, color: "#339933" }
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "csharp", icon: SiSharp, color: "#339933" },
+      { name: "Golang", icon: SiGoland, color: "#339933" }
     ]
   },
   {
