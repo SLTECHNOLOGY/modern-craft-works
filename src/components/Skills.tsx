@@ -38,8 +38,8 @@ const skillCategories: SkillCategory[] = [
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-      { name: "csharp", icon: SiSharp, color: "#339933" },
-      { name: "Golang", icon: SiGoland, color: "#339933" }
+      { name: "csharp", icon: SiSharp, color: "#CC6699" },
+      { name: "Golang", icon: SiGoland, color: "#3178C6" }
     ]
   },
   {
